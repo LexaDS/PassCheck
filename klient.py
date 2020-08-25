@@ -11,9 +11,9 @@ class Client:
         url = 'http://127.0.0.1:5000/api/v1/resources/books/all'
         g=requests.get(url)
         f=json.loads(g.text)
-        with open ("myget.txt",'w') as x:
-            x.writelines(json.dumps(f,indent=2))
-
+        # with open ("myget.txt",'w') as x:
+        #     x.writelines(json.dumps(f,indent=2))
+        print(json.dumps(f,indent=2))
 
 Client().get()
 
